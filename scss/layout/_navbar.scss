@@ -1,0 +1,52 @@
+@use "../abstract/variables" as *;
+
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 0;
+    background-color: rgb(227, 226, 226);
+    
+    .nav-item a{
+        text-decoration: none;
+        color: rgb(131, 131, 131);
+        font-family: 'Fira Sans';
+    }
+}
+
+.page-nav{
+    /* place navbar at bottom */
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    /* makes navbar the first layer*/
+    z-index: 1;
+}
+
+.nav-item.active a{
+    color: #000 ;
+}
+
+@media screen and (min-width: 768px){
+    .page-nav{
+        /* navbar stays in place */
+        position: sticky;
+        width: 100%;
+        
+    } 
+    .nav-list{
+        padding: 1.7em 0;
+
+        a{
+            font-size: 1.2em;
+        }
+    }
+
+    .nav-item a:hover{
+        color: rgb(71, 71, 71);
+    }
+    
+    .nav-item.active a{
+        color: #000 ;
+    }
+  
+}
