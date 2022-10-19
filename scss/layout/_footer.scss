@@ -1,0 +1,79 @@
+@use "../abstract/variables" as *;
+
+.page-footer{
+    background-color: gray;
+    height: 20rem;
+}
+.contact-footer{
+    padding-bottom: 3em;
+}
+
+.contact-footer iframe{
+    width: 100%;
+    height: 45vh;
+
+    filter: brightness(80%);
+
+}
+
+.contact-footer{
+    display: flex;
+    justify-content: center;
+    background-color: $grey-background-clr;
+}
+
+.footer-box{
+    position: absolute;
+    background-color: $yellow-background-clr;
+    width: 80%;
+    
+    padding: 2em 1em 5em 1em;
+ 
+    margin: -6em 1em;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .footer-btn{
+        visibility: visible;
+        width: 100%;
+        border: none;
+        font-size: 1.5em;
+        background-color: rgb(180, 179, 179);
+        padding: .5em 0 1em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            a {
+                text-decoration: none;
+                color: rgb(95, 94, 94);
+                
+            }
+            .footer-icon{
+                
+                font-size: 2em;
+               
+    
+            }
+            &a:hover{
+                color:rgb(29,29,29);
+            }
+        }
+        .contact-footer{
+            padding-bottom: 20em;
+        }
+
+         .contact-footer{
+        /* position the box inside map */
+        justify-content: flex-start;
+    }
+
+    .footer-box{
+        align-self: center;
+        width: auto;
+        padding-right: 3em;
+        margin-left: 3em;
+    }
+        
+    }

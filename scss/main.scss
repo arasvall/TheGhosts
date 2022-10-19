@@ -1,0 +1,209 @@
+@use "abstract/variables" as *;
+@use "layout/header";
+@use "layout/navbar";
+@use "components/button";
+@use "pages/contact-page";
+@use "pages/landing-page";
+@use "layout/footer";
+
+body,html{
+    height: 100vh;
+    width: 100%;
+}
+
+.main-container-1{
+    background-color: #A9A19E;
+
+    h3{
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 900;
+        
+        padding: .7em 0 .7em .4em;
+        
+        width: 95%;
+    }
+   
+    p{
+        font-family: 'Fira Sans', serif;
+    }
+
+    .join-btn{
+        /* no button here in mobile version */
+        visibility: hidden;
+    }
+}
+
+.main-text{
+    color: #525252;
+    font-size: 1.3em;
+    line-height: 1.2em;
+
+    padding: 0em .9em 1.5em .9em;
+}
+
+.main-small-boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .box-item{
+        background-color: #fff;
+        border-radius: 6px;
+
+        width: 70%;
+        padding: 0 1em 3em 1em;
+        margin: 2em 0 4em 0;
+
+        .main-h5{
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $text-clr;
+
+            text-align: center;
+
+            padding-bottom: .4em;
+            margin-top: 2em;
+        }
+
+        .main-box-text{
+            font-size: 1rem;
+            text-align: center;
+            color: $grey-background-clr;
+            line-height: 1.3em;
+        }
+    }
+
+    .child {
+        background-color: $header-background-clr;
+    }
+
+    .adult{
+        background-color: $yellow-background-clr;
+    }
+
+    .old{
+        background-color: $orange-background-clr;
+        height: auto;
+    }
+
+    img{
+        border-radius: 6px;
+        padding: 2em 5em 0 5em;
+        
+    }
+    .child, .adult, .old{
+        /* Move the img outside the boxes */
+       margin: -25px 1px;
+       align-self: center;
+    }
+}
+
+.main-container-2{
+    background-color: $yellow-background-clr;
+    text-align: center;
+
+    .main-h4{
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600;
+
+        padding: 1em 0em;
+    }
+
+    .main-text{
+        padding-bottom: 1em;
+    }
+    p{
+        font-family: 'Fira Sans', serif;
+    }
+}
+
+.main-container-2 :nth-last-child(1){
+    padding-bottom: 5em;
+}
+
+
+@media screen and (min-width: 768px){
+    
+    .main-container-1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        height: 90vh;
+        padding-top: 10em;
+        
+
+        h3{
+            padding: 0;
+            width: 40%;
+            font-size: 4em;
+        }
+        .main-text{
+            padding: 0;
+            width: 30%;
+            line-height: 1.5em;
+            margin-left: 3em;
+            
+        }
+        .join-btn{
+            visibility: visible;
+            align-self: center;
+            margin-top: 8rem;
+            margin-left: -68%;
+        }
+        
+    }
+
+    .box-item{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 22rem;
+        width: auto; 
+
+        &:nth-of-type(1){
+            margin-left: 4em;
+            margin-right: 3em;
+        }
+        &:nth-of-type(3){
+            margin-right: 4em;
+            margin-left: 3em;
+        }
+        
+    }
+
+    .main-small-boxes{
+        flex-direction: row;
+        position: absolute;
+        margin-top: 28em;   
+        width: 85%;
+        
+    }
+    .child, .adult, .old{
+        /* Move the img outside the boxes */
+       align-self: center;
+    }
+ 
+    .main-container-2{
+        padding: 15em 0 7em 0;
+        display: flex;
+        flex-direction: column;
+
+        .main-text{
+            width: 50%;
+            align-self: center;
+        }
+    }
+
+    /* Arrow */ 
+ .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 48
+  }
+}
